@@ -47,7 +47,7 @@
     "prepublishOnly": "npm run type && npm run build && npm run test",
     "lint": "eslint . --config .eslintrc.cjs --rule \"prettier/prettier: error\"",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run build"
+    "prepare": "git submodule update --init && npm run setup && npm run build"
   },
   "files": [
     "dist",
