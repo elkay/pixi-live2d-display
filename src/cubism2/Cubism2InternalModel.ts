@@ -259,6 +259,10 @@ export class Cubism2InternalModel extends InternalModel {
             for (let i = 0; i < this.motionManager.lipSyncIds.length; ++i) {
                 this.coreModel.setParamFloat(
                     this.coreModel.getParamIndex(this.motionManager.lipSyncIds[i]!),
+                    value
+                );
+                this.coreModel.setParameterValueByIndex(
+                    this.coreModel.getParameterIndex(this.motionManager.lipSyncIds[i]!),
                     value,
                 );
             }
